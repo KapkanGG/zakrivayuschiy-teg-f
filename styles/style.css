@@ -1,29 +1,29 @@
-.filter-1 {
+.filter-grayscale {
 	filter: grayscale(80%);
 }
 
-.filter-2 {
+.filter-brightness {
 	filter: brightness(2);
 }
 
-.filter-3 {
+.filter-sepia {
 	filter: sepia(60%);
 }
 
-.filter-4 {
+.filter-brightness {
 	filter: brightness(0.4);
 }
 
-.filter-5 {
+.filter-saturate {
 	filter: saturate(60%);
 }
 
-.filter-6 {
+.filter-blur {
 	filter: blur(5px);
 }
 
-.filter-7 {
-	filter: invert(10%);
+.filter-invert {
+	filter: invert(10%) brightness(90%) contrast(110%) blur(1px);;
 }
 
 .page {
@@ -47,13 +47,12 @@
 	background-image: var(--background-image);
 	background: var(--page-background-color);
 	border: var(--border-width) solid var(--contour-color);
-	width: clamp(300px, 696px, 100%);
-	min-height: clamp(200px, 364px, 100vh);
+	padding: clamp(120px, 0.75vw + 117.2px, 128px) 0;
 }
 
 .header__title {
 	font-weight: var(--text-weight);
-	text-transform: uppercase;
+	text-transform: uppercase; /* это разве не то, что вы просите? Tип при помощи css сделаны заглавные буквы))0)*/
 	margin-block-end: 20px;
 	font-family: var(--accent-font), sans-serif;
 	font-size: clamp(49px, 3.4vw + 36.25px, 65px);
@@ -96,6 +95,8 @@
 .card__image-container {
 	position: relative;
 	inline-size: 100%;
+	border: 2px solid var(--contour-color);
+	aspect-ratio: auto;
 }
 
 .card__image {
@@ -160,7 +161,7 @@
 	cursor: pointer;
 }
 
-.button:focus {
+.button:focus-visible {
 	outline: none;
 	box-shadow: 2px 2px 0 0 var(--contour-color);
 }

@@ -1,4 +1,4 @@
-.sparks {
+.slideInFromLeft {
   opacity: 0;
 }
 
@@ -17,7 +17,7 @@
   transition: fill var(--timing-animation-m) linear;
 }
 
-.like-icon .heart {
+.like-icon .fadeIn {
   transform-origin: center;
 }
 
@@ -56,17 +56,17 @@
   transition: fill var(--timing-animation-l) linear 0.06s;
 }
 
-.like-icon.is-liked .heart {
-  animation: heart var(--timing-animation-l) ease-in var(--timing-animation-m) 1
+.like-icon.is-liked .fadeIn {
+  animation: fadeIn var(--timing-animation-l) ease-in var(--timing-animation-m) 1
     alternate;
 }
 
-.like-icon.is-liked .sparks {
-  animation: sparks var(--timing-animation-l) ease-in var(--timing-animation-l)
+.like-icon.is-liked .slideInFromLeft {
+  animation: slideInFromLeft var(--timing-animation-l) ease-in var(--timing-animation-l)
     1 alternate;
 }
 
-@keyframes heart {
+@keyframes fadeIn {
   from {
     transform: scale(1);
   }
@@ -75,7 +75,7 @@
   }
 }
 
-@keyframes sparks {
+@keyframes slideInFromLeft {
   from {
     opacity: 0;
   }
